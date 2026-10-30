@@ -1,0 +1,87 @@
+/* Online Tutoring System — A2 poster (594 x 420 mm). 1 CSS px = 1/100 inch → 2339 x 1654 px canvas */
+@font-face{font-family:Oswald;font-weight:500;src:url(assets/fonts/oswald-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Oswald;font-weight:600;src:url(assets/fonts/oswald-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:Oswald;font-weight:700;src:url(assets/fonts/oswald-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:Barlow;font-weight:400;src:url(assets/fonts/barlow-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Barlow;font-weight:500;src:url(assets/fonts/barlow-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Barlow;font-weight:600;src:url(assets/fonts/barlow-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:Barlow;font-weight:700;src:url(assets/fonts/barlow-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:400;src:url(assets/fonts/inter-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:500;src:url(assets/fonts/inter-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:600;src:url(assets/fonts/inter-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:700;src:url(assets/fonts/inter-latin-700-normal.woff2) format("woff2")}
+
+:root{--bg:#092964;--blue:#1453b6;--green:#1b6930;--purple:#5a2ab2;--red:#c52726;--orange:#d75809;--ink:#1b1b1b}
+@page{size:594mm 420mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:2339px;height:1654px;background:var(--bg);font-family:Barlow,sans-serif;color:var(--ink)}
+.poster{position:relative;width:2339px;height:1654px;overflow:hidden;background:var(--bg)}
+.abs{position:absolute}
+
+/* header */
+.hbox{position:absolute;top:42px;height:124px;border:2px solid #7f9bd8;border-radius:13px;background:#0d275f;color:#fff}
+.hbox.left{left:42px;width:417px;padding:5px 24px}
+.hbox.left .code{font:700 46px/52px Oswald;letter-spacing:1px}
+.hbox.left .name{font:600 25px/31px Barlow}
+.hbox.right{left:1810px;width:488px;padding:10px 22px;font:600 24.2px/33px Barlow}
+.hbox.right .row{display:flex}.hbox.right .k{width:200px}.hbox.right .c{width:17px}.hbox.right .row span:last-child{white-space:nowrap}
+.title{position:absolute;left:459px;width:1351px;top:20px;text-align:center;color:#fff;font:700 84.5px/120px Oswald;letter-spacing:1.5px;text-transform:uppercase}
+.subtitle{position:absolute;left:459px;width:1351px;top:128px;text-align:center;color:#f5c518;font:600 27px/34px Barlow;letter-spacing:1.2px}
+
+/* panels */
+.panel{position:absolute;overflow:hidden;border-radius:10px;background:#fff}
+.panel::after{content:"";position:absolute;inset:0;border:3px solid var(--c);border-radius:10px;pointer-events:none}
+.panel .hd{position:absolute;left:0;top:0;right:0;height:53px;background:var(--c);color:#fff;font:600 30px/53px Oswald;padding-left:20px;text-transform:uppercase;letter-spacing:.1px;white-space:nowrap}
+.blue{--c:var(--blue)}.green{--c:var(--green)}.purple{--c:var(--purple)}.red{--c:var(--red)}.orange{--c:var(--orange)}
+
+.oswald{font-family:Oswald;font-weight:600;text-transform:uppercase}
+.txt{position:absolute;font:400 19px/25px Barlow}
+.just{text-align:justify}
+
+/* panel 1 */
+.abstract{position:absolute;left:18px;top:300px;width:683px;height:120px;background:#eaf0fc;border:1.5px solid #b9c7e4;border-radius:9px}
+.abstract .t{position:absolute;left:77px;top:12px;font:600 20.5px/26px Oswald;color:#1557b8;text-transform:uppercase}
+.abstract ul{position:absolute;left:77px;top:37px;list-style:none;font:400 18px/24px Barlow}
+.abstract ul li::before{content:"• ";margin-left:-3px}
+
+/* panel 2 */
+.obj{position:absolute;left:18px;width:683px;height:86px;background:#fff;border:1.5px solid #d6dae3;border-radius:9px}
+.obj .ic{position:absolute;left:15px;top:22px}
+.obj .t{position:absolute;left:71px;top:10px;font:700 19.8px/24px Barlow;color:#111}
+.obj .d{position:absolute;left:71px;top:34px;width:600px;font:400 16.5px/21px Barlow;color:#555}
+
+/* panel 3 */
+.card{position:absolute;border-radius:9px}
+.card.c1{left:18px;top:65px;width:334px;height:381px;background:#fbe9e7;border:1.5px solid #e6a9a4}
+.card.c2{left:367px;top:65px;width:335px;height:381px;background:#eaf0fc;border:1.5px solid #a8bde0}
+.card .t{position:absolute;left:0;right:0;top:9px;text-align:center;font:600 24px/30px Oswald}
+.card .t small{font:600 21px Oswald;text-transform:none}
+.card ul{position:absolute;left:14px;top:38px;list-style:none;font:400 17.5px/25px Barlow}
+.card ul li::before{content:"✓ ";font-weight:700}
+.card .ex{position:absolute;left:0;right:0;top:168px;text-align:center;font:700 17.5px/26px Barlow}
+.mbox{position:absolute;background:#fff;border:1.5px solid #222;text-align:center;font:700 15px/28px Barlow;color:#111}
+.cap{position:absolute;left:0;right:0;text-align:center;font:400 15.5px/19px Barlow;color:#222}
+
+/* matrix */
+table.mx{position:absolute;left:15px;top:66px;width:722px;border-collapse:collapse;font:400 14.4px/20px Inter;table-layout:fixed}
+table.mx th,table.mx td{border:1px solid #a9bde0;text-align:center;vertical-align:middle;padding:0 3px}
+table.mx th{background:#e8eefb;font-weight:700;height:55px;font-size:15px}
+table.mx th:last-child,table.mx td:last-child{text-align:left;font:400 15.2px/20px Barlow;padding:0 12px 0 7px}
+table.mx th:last-child{font:700 15px/19px Inter}
+table.mx td b{font-weight:700}
+
+/* concept / QA / future */
+.bul{position:absolute;font:400 16.7px/22px Barlow;list-style:none}
+.bul li::before{content:"• "}
+.ctitle{position:absolute;font:600 28px/34px Oswald;text-transform:uppercase}
+.qa{position:absolute;top:67px;width:172px;height:289px;border-radius:11px;text-align:center;border:1.5px solid}
+.qa .ic{position:absolute;left:56px;top:13px}
+.qa .t{position:absolute;left:0;right:0;top:77px;font:600 23px/32px Oswald}
+.qa .d{position:absolute;left:10px;right:10px;top:109px;font:400 16.5px/22px Barlow;color:#222}
+.ft{position:absolute;font:600 23px/30px Oswald;color:#b8470a}
+.fb{position:absolute;font:400 17px/21.5px Barlow;list-style:none}
+.fb li::before{content:"• "}
+
+/* QR card (added in v2) */
+.qr{position:absolute;left:1620px;top:42px;width:176px;height:124px;border:2px solid #7f9bd8;border-radius:13px;background:#0d275f;color:#fff;text-align:center}
+.qr img{position:absolute;left:34px;top:9px;width:108px;height:108px;background:#fff;border-radius:4px;padding:5px}

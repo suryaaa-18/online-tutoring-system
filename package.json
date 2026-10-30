@@ -1,0 +1,19 @@
+{
+  "name": "online-tutoring-system",
+  "version": "1.0.0",
+  "description": "A2 poster (CE6014 OOSD) - Online Tutoring System: UML, Composition & Interfaces",
+  "scripts": {
+    "qr": "node gen-qr.js",
+    "render": "node render.js"
+  },
+  "keywords": [],
+  "author": "Suryaprakash Yadav",
+  "license": "ISC",
+  "dependencies": {
+    "@fontsource/barlow": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/oswald": "^5.3.0",
+    "qrcode": "^1.5.4",
+    "playwright": "^1.50.0"
+  }
+}
